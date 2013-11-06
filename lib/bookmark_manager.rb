@@ -17,12 +17,12 @@ class Bookmark_manager < Sinatra::Base
 
   set :views, File.join(File.dirname(__FILE__), '..', 'views')
 
-  get '/' do
-  	@links = Link.all
-    erb :index
-  end
+    get '/' do
+   	  @links = Link.all
+      erb :index
+    end
 
-  post '/links' do
+    post '/links' do
   	url = params["url"]
     title = params["title"]
     tags = params["tags"].split(" ").map do |tag|
