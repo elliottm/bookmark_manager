@@ -17,5 +17,20 @@ describe Link do
      link.description= "ahoy ahoy"
      expect(link.description).to eq "ahoy ahoy"
    end
+
+  context 'it has a' do
+
+    it 'description' do
+      expect(link).to respond_to :description
+    end
+
+    it 'description=' do
+      expect(link).to respond_to :description=
+    end
+  end
+
+
+
+   #respond to methodology??
 end
 
